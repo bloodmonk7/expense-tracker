@@ -19,7 +19,7 @@ export default function Navigation() {
         </div>
 
         {/* Buttons */}
-        <nav className="flex items-center gap-2">
+        <nav className="flex items-center gap-4">
           <div>
             <IoMdStats className="text-2xl" />
           </div>
