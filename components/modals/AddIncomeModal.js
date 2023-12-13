@@ -8,7 +8,7 @@ import { FaRegTrashAlt } from 'react-icons/fa';
 
 import Modal from '@/components/Modal';
 
-function AddIncomeModal({ show, onClose }) {
+export default function AddIncomeModal({ show, onClose }) {
   const amountRef = useRef();
   const descriptionRef = useRef();
   const { income, addIncomeItem, removeIncomeItem } =
@@ -19,7 +19,7 @@ function AddIncomeModal({ show, onClose }) {
     e.preventDefault();
 
     const newIncome = {
-      amount: amountRef.current.value,
+      amount: +amountRef.current.value,
       description: descriptionRef.current.value,
       createdAt: new Date(),
     };
@@ -108,5 +108,3 @@ function AddIncomeModal({ show, onClose }) {
     </Modal>
   );
 }
-
-export default AddIncomeModal;
