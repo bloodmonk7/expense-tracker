@@ -2,6 +2,7 @@
 
 import { useState, useContext, useEffect } from 'react';
 import { financeContext } from '@/lib/store/finance-context';
+import { authContext } from '@/lib/store/auth-context';
 
 import { currencyFormatter } from '@/lib/utils';
 
@@ -9,6 +10,7 @@ import ExpenseCategoryItem from '@/components/ExpenseCategoryItem';
 
 import AddIncomeModal from '@/components/modals/AddIncomeModal';
 import AddExpensesModal from '@/components/modals/AddExpensesModal';
+import SignIn from '@/components/SignIn';
 
 import {
   Chart as ChartJS,
@@ -29,6 +31,8 @@ export default function Home() {
 
   const { expenses, income } = useContext(financeContext);
 
+  const { user } = useContext(authContext);
+
   useEffect(() => {
     const newBalance =
       income.reduce((total, i) => {
@@ -40,6 +44,10 @@ export default function Home() {
 
     setBalance(newBalance);
   }, [expenses, income]);
+
+  if (!user) {
+    return <SignIn />;
+  }
 
   return (
     <>
