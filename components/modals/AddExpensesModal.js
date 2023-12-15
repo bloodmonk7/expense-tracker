@@ -102,6 +102,7 @@ export default function AddExpensesModal({ show, onClose }) {
           {showAddExpense && (
             <div className="flex items-center justify-between">
               <input
+                required 
                 type="text"
                 placeholder="Enter Title"
                 ref={titleRef}
