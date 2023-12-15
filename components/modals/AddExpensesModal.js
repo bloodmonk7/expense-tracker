@@ -6,6 +6,7 @@ import { financeContext } from '@/lib/store/finance-context';
 import { v4 as uuidv4 } from 'uuid';
 
 import Modal from '../Modal';
+import { toast } from 'react-toastify';
 
 export default function AddExpensesModal({ show, onClose }) {
   const [expenseAmount, setExpenseAmount] = useState('');
@@ -44,8 +45,10 @@ export default function AddExpensesModal({ show, onClose }) {
       setExpenseAmount('');
       setSelectedCategory(null);
       onClose();
+      toast.success('Expense added to categor!');
     } catch (error) {
       console.log(error.message);
+      toast.error(error.message);
     }
   };
 
@@ -56,8 +59,10 @@ export default function AddExpensesModal({ show, onClose }) {
     try {
       await addCategory({ title, color, total: 0 });
       setShowAddExpense(false);
+      toast.success('Category created!');
     } catch (error) {
       console.log(error.message);
+      toast.error(error.message);
     }
   };
 

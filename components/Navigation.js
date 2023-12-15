@@ -29,7 +29,9 @@ export default function Navigation() {
         {user && !loading && (
           <nav className="flex items-center gap-4">
             <div>
-              <IoMdStats className="text-2xl" />
+              <a href="#stats">
+                <IoMdStats className="text-2xl" />
+              </a>
             </div>
             <div>
               <button onClick={logout} className="btn btn-danger">

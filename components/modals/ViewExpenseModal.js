@@ -5,6 +5,7 @@ import Modal from '@/components/Modal';
 import { currencyFormatter } from '@/lib/utils';
 
 import { FaRegTrashAlt } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 function ViewExpenseModal({ show, onClose, expense }) {
   const { deleteExpenseItem, deleteExpenseCategory } =
@@ -13,8 +14,10 @@ function ViewExpenseModal({ show, onClose, expense }) {
   const deleteExpenseHandler = async () => {
     try {
       await deleteExpenseCategory(expense.id);
+      toast.success('Expense category deleted!');
     } catch (error) {
       console.log(error.message);
+      toast.error(error.message);
     }
   };
 
@@ -32,8 +35,10 @@ function ViewExpenseModal({ show, onClose, expense }) {
       };
 
       await deleteExpenseItem(updatedExpense, expense.id);
+      toast.success('Expense item deleted!');
     } catch (error) {
       console.log(error.message);
+      toast.error(error.message);
     }
   };
 

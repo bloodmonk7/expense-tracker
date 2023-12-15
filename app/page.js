@@ -107,7 +107,9 @@ export default function Home() {
 
         {/* Chart Section */}
         <section className="py-6">
-          <h3 className="text-2xl">Stats</h3>
+          <h3 id="stats" className="text-2xl">
+            Stats
+          </h3>
           <div className="w-1/2 mx-auto">
             <Doughnut
               data={{
