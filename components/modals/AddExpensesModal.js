@@ -45,7 +45,7 @@ export default function AddExpensesModal({ show, onClose }) {
       setExpenseAmount('');
       setSelectedCategory(null);
       onClose();
-      toast.success('Expense added to categor!');
+      toast.success('Expense added to category!');
     } catch (error) {
       console.log(error.message);
       toast.error(error.message);
