@@ -56,6 +56,11 @@ export default function AddExpensesModal({ show, onClose }) {
     const title = titleRef.current.value;
     const color = colorRef.current.value;
 
+    if (!title) {
+      toast.error('Please enter a title for the new category.');
+      return;
+    }
+
     try {
       await addCategory({ title, color, total: 0 });
       setShowAddExpense(false);
@@ -105,7 +110,6 @@ export default function AddExpensesModal({ show, onClose }) {
                 type="text"
                 placeholder="Enter Title"
                 ref={titleRef}
-                  required
               />
 
               <label>Pick Color</label>
