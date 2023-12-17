@@ -85,7 +85,7 @@ export default function AddIncomeModal({ show, onClose }) {
         </button>
       </form>
 
-      <div className="flex flex-col gap-4 mt-6">
+      <div className="flex flex-col gap-4 mt-6 max-h-[40vh] overflow-y-auto">
         <h3 className="text-2xl font-bold">Income History</h3>
 
         {income.map((i) => {

@@ -54,7 +54,7 @@ function ViewExpenseModal({ show, onClose, expense }) {
         </button>
       </div>
 
-      <div>
+      <div className="max-h-[60vh] overflow-y-auto">
         <h3 className="my-4 text-2xl">Expense History</h3>
         {expense.items.map((item) => {
           return (

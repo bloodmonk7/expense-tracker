@@ -8,16 +8,36 @@
   }
 
   body{
-    @apply bg-slate-900 text-white relative
+    @apply bg-slate-900 text-white relative overflow-x-hidden
   }
 
   button{
-    @apply hover:scale-110 transition-all duration-100
+    @apply hover:scale-95 transition-all duration-100
   }
 
   input{
     @apply px-4 py-2 bg-slate-600 rounded-xl
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: bg-slate-800;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: bg-lime-500;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: bg-lime-600;
+  }
+
 }
 
 @layer utilities{

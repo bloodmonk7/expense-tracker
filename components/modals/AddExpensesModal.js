@@ -89,7 +89,7 @@ export default function AddExpensesModal({ show, onClose }) {
 
       {/* Expense Categories */}
       {expenseAmount > 0 && (
-        <div className="flex flex-col gap-4 mt-6">
+        <div className="flex flex-col gap-4 mt-6 max-h-[60vh] overflow-y-auto overflow-x-hidden">
           <div className="flex items-center justify-between">
             <h3 className="text-2xl capitalize">
               Select expense category
