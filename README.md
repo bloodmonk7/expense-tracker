@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Expense Tracker
+
+This project was setup using Next,js. The project helps in tracking your daily expenses and manage them accordingly via features allowing you to add Categories to for managing expenses and provides data in visual manner to track them without much hassle.
+
+## Table of Contents
+
+- [Demo](#demo)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Technologies Used](#technologies-used)
+
+## Demo
+
+Here is the [link](https://expense-tracker-bice-ten.vercel.app/) to checkout the live demo.
+
+## Features
+
+- Add and remove your Income.
+- Add and remove your Expenses.
+- Categorize your Expenses into specific custom made Categories.
+- Keep track of all entities and when they were added.
+- Get stats for your Expenses.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js and npm (Node Package Manager) installed
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   git clone https://github.com/bloodmonk7/expense-tracker.git
+   cd expense-tracker
 
-## Learn More
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies by running the following command:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm i
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
 
-## Deploy on Vercel
+3. Start the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. You can check the deployment on localhost:
+   
+   ```bash
+   http://localhost:300x
+   ```
+
+## Technologies Used
+
+- Next.js
+- TailwindCSS
+- Firebase
+- Firebase-Auth
