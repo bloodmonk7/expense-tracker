@@ -1,6 +1,6 @@
 # Expense Tracker
 
-This project was setup using Next,js. The project helps in tracking your daily expenses and manage them accordingly via features allowing you to add Categories to for managing expenses and provides data in visual manner to track them without much hassle.
+This project was setup using Next.js. The project helps in tracking your daily expenses and manage them accordingly via features allowing you to add Categories to for managing expenses and provides data in visual manner to track them without much hassle.
 
 ## Table of Contents
 
